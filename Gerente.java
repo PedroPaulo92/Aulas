@@ -1,8 +1,8 @@
-public Gerente extends Funcioanario{
+public class Gerente extends Funcionario{
 
-		Gerente(Stirng nome,float horasTrabalhadas){
-			super(nome,horasTrabalhadas);
-			this.salario = 20f;
+	Gerente(String nome,float horasTrabalhadas){
+		super(nome,horasTrabalhadas);
+		this.salario = 20f;
 		
-		}
-		}
+	}
+}

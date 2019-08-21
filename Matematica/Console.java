@@ -1,5 +1,13 @@
 import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
 
+
+
+// Adicionar uma nova condição no metodo de escolha paracalular a média ponderada 
+// e no terminal passar a media e a nota para cada 'Prova' e passar os valores para o mótodo 
+// que calcula  a média. É necessário de alguma forma indicar que a cada 
+// 2 números será uma prova {n,p} new Prova()
 
 public class Console {
 
@@ -12,17 +20,19 @@ public class Console {
             input = sc1.nextLine();
             switch (input) {
             case "media":
+            System.out.println("Digite os valores a seem calculados separados por espaço!");
                 input = sc1.nextLine();
                 Media media = new Media();
 
-                double[] meuArray = new double[5];
-
+                List<Double> myNumberList = new ArrayList<Double>();
                 String[] strings = input.split(" ");
-                for (int i = 0; i < strings.length; i++) {
-                    System.out.println(strings[i]);
+                //Atribuir os valores de entrada do usuário para array de double e calcular a média desses valores
+                for (String inputValue : strings) {
+                    //System.out.println(valor);
+                    myNumberList.add( Double.parseDouble(inputValue));
                 }
 
-               media.calcularMedia(meuArray);
+               media.calcularMedia(myNumberList);
                 break;
 
             default:
